@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    env_file:
+      - .env
+    command: ./expenses/scripts/run.sh
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    volumes:
+      - .:/app
